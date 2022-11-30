@@ -1,0 +1,19 @@
+footer {
+  width: 100%;
+  background: rgb(29, 29, 36);
+  background: linear-gradient(
+    189deg,
+    rgba(29, 29, 36, 1) 27%,
+    rgba(53, 53, 61, 0.9873621323529411) 51%,
+    rgba(29, 29, 36, 1) 80%
+  );
+  color: white;
+}
+
+footer p:hover {
+  color: #e94600;
+}
+
+h6{
+  font-weight: 400;
+}

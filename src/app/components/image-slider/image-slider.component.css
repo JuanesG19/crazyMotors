@@ -1,0 +1,36 @@
+.slider{
+display: block;
+}
+
+.slider .slogan p:hover {
+  color:#e94600;
+  text-shadow: -1px 5px 4px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 1px #381100;
+}
+
+.slogan {
+  display: flex;
+  justify-content: center;
+}
+
+.slogan p {
+  position: absolute;
+  font-size: 7.8vw;
+  font-weight: bold;
+  z-index: 1;
+  padding-top: 5%;
+
+  color: rgba(255, 255, 255, 0.56);
+  text-shadow: -1px 5px 4px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 1px #888888;
+}
+
+.sliderBanners {
+  max-height: 300px;
+  z-index: 0;
+}
+
+.sliderBanners img {
+  max-height: 300px;
+  object-fit: cover;
+}

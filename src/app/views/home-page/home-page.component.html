@@ -1,0 +1,69 @@
+<app-image-slider></app-image-slider>
+
+<div class="homepage">
+
+  <div class="container pt-5 pb-5 superSportSection">
+    <div class="row">
+      <div class="col-sm-6 col-md-7 superSportImg">
+        <input
+          type="range"
+          class="form-range"
+          min="1"
+          max="8"
+          step="1"
+          value="1"
+          id="slider"
+          (change)="selectImage()"
+        />
+        <img [src]="imageBike" alt="Super Bike" />
+      </div>
+      <div class="col-sm-5 col-md-5 superSportInfo">
+        <div class="superSportDescription">
+          <h3 class="descriptionTitle">
+            <a style="color: #2f2f2f">M</a>otos
+            <a style="color: #2f2f2f">S</a>uper
+            <a style="color: #2f2f2f">S</a>port
+          </h3>
+          <p class="descriptionInformation pb-2">
+            ¡La especialidad de la casa! Las motos super sport. Todas nuestras
+            motos Honda las encuentras en un solo lugar con la tecnología y
+            diseño del fabricante número 1 de motos en el mundo.
+          </p>
+          <a class="linkSuperSport">Ver Categoria Super Sport</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center bikeCards">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+      <div class="col bikeCardsContainer">
+        <p class="bikeTextCards">
+          Tenemos motos de alto cilindraje <br />
+          para que lleves tu estilo de vida <br />
+          a otro nivel
+        </p>
+        <img [src]="bike1" class="bikeImgCards" id="bikeImg1" />
+      </div>
+
+      <div class="col bikeCardsContainer">
+        <p class="bikeTextCards">
+          Bajas cuotas de financiamiento<br />
+          Porque vives a toda velocidad<br />
+          ¡AQUI Y AHORA!<br />
+        </p>
+        <img [src]="bike2" class="bikeImgCards" id="bikeImg2" />
+      </div>
+
+      <div class="col bikeCardsContainer">
+        <p class="bikeTextCards">
+          ¡ACELERA!<br />
+          Estas a un paso de<br />
+          demostrar quien manda
+        </p>
+        <img [src]="bike3" class="bikeImgCards" id="bikeImg1" />
+      </div>
+    </div>
+  </div>
+</div>
+

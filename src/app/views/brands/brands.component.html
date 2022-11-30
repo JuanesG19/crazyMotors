@@ -1,0 +1,16 @@
+<div class="brands">
+  <div class="row row-cols-2 row-cols-md-4 g-4">
+    <div class="col" *ngFor="let brand of brands">
+      <a [routerLink]="['/{{brand.name}}']">
+        <div class="card">
+          <div class="img">
+            <img [src]="brand.image" class="card-img-top" alt="brands" />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ brand.name | uppercase }}</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

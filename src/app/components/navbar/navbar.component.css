@@ -1,0 +1,22 @@
+.navbar {
+  background: rgb(29, 29, 36);
+  background: linear-gradient(
+    189deg,
+    rgba(29, 29, 36, 1) 27%,
+    rgba(53, 53, 61, 0.9873621323529411) 51%,
+    rgba(29, 29, 36, 1) 80%
+  );
+}
+
+.navbar a {
+  color: white;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: #ee642a;
+}
+
+.dropdown-menu a {
+  color: black;
+}
