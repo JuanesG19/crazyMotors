@@ -1,0 +1,26 @@
+.registerContainer {
+  padding: 15px 20px 30px 20px;
+}
+
+.registerTitle {
+  text-align: center;
+  padding-top: 15px;
+  color: #1d1d24;
+}
+
+.registerTitle:hover {
+  color: #e94600;
+}
+
+form button {
+  background-color: #35353d;
+  color: black;
+  border: #1d1d24 solid;
+  width: 90px;
+}
+
+form button:hover {
+  background-color: #35353d;
+  color: #e94600;
+  border: #e94600 solid;
+}

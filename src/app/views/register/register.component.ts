@@ -12,10 +12,20 @@ export class RegisterComponent implements OnInit {
   public formGroup!: FormGroup;
   userLogin: Login;
 
+  bike1: string;
+  bike2: string;
+  bike3: string;
+  bike4: string;
+
   constructor(
     private formBuilder: FormBuilder,
     private loginService: LoginService
-  ) {}
+  ) {
+    this.bike1 = '../../../assets/img/cinematicBikes/img1.jpg';
+    this.bike2 = '../../../assets/img/cinematicBikes/img2.jpeg';
+    this.bike3 = '../../../assets/img/cinematicBikes/img3.jpeg';
+    this.bike4 = '../../../assets/img/cinematicBikes/img4.jpg';
+  }
 
   ngOnInit(): void {
     this.formGroup = this.formBuilder.group({

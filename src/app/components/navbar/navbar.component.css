@@ -20,3 +20,9 @@
 .dropdown-menu a {
   color: black;
 }
+
+.welcomeTitle {
+  padding-top: 3px;
+  color: white;
+  font-weight: 500;
+}

@@ -50,6 +50,11 @@
           else register
         "
       >
+        <div class="pe-3">
+          <h5 class="welcomeTitle">
+            Bienvenido {{ loginService.userInfo['name']}}
+          </h5>
+        </div>
         <div class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
@@ -80,7 +85,9 @@
             <li>
               <a class="dropdown-item" [routerLink]="['/profile']">Perfil</a>
             </li>
-            <li><a class="dropdown-item" (click)="logout()">Cerrar Sesión</a></li>
+            <li>
+              <a class="dropdown-item" (click)="logout()">Cerrar Sesión</a>
+            </li>
           </ul>
         </div>
       </form>

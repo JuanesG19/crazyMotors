@@ -6,8 +6,8 @@ import { User } from '../models/user.model';
   providedIn: 'root',
 })
 export class LoginService {
-  userState: Boolean;
-  userInfo: User;
+  public userState: Boolean;
+  public userInfo: User;
 
   constructor() {}
 }
