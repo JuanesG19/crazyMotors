@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, Subject, tap } from 'rxjs';
 import { Login } from '../models/login.model';
 import { User } from '../models/user.model';
 
@@ -6,8 +7,16 @@ import { User } from '../models/user.model';
   providedIn: 'root',
 })
 export class LoginService {
-  public userState: Boolean;
-  public userInfo: User;
+  private user$ = new Subject<Login>();
 
   constructor() {}
+
+  register(loginUser: Login) {
+    localStorage.setItem('login', JSON.stringify(loginUser));
+    this.user$.next(loginUser);
+  }
+
+  data$(): Observable<Login> {
+    return this.user$.asObservable();
+  }
 }

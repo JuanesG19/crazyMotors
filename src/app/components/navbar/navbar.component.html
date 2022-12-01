@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg navbar-expand-md">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">CrazyMotors Store</a>
     <button
@@ -43,16 +43,11 @@
           </ul>
         </li>
       </ul>
-      <form
-        class="d-flex"
-        *ngIf="
-          loginService.userState == true || stateLogin == true;
-          else register
-        "
-      >
+      <form class="d-flex" *ngIf="this.stateLogin == true; else register">
         <div class="pe-3">
           <h5 class="welcomeTitle">
-            Bienvenido {{ loginService.userInfo['name']}}
+            Bienvenido
+            {{ this.user.userInfo["name"] }}
           </h5>
         </div>
         <div class="nav-item dropdown">

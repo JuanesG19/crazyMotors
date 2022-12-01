@@ -51,8 +51,6 @@ export class RegisterComponent implements OnInit {
       userInfo: userForm,
     };
 
-    localStorage.setItem('login', JSON.stringify(loginUser));
-    this.loginService.userState = true;
-    this.loginService.userInfo = userForm;
+    this.loginService.register(loginUser);
   }
 }
