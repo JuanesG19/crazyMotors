@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Brands } from 'src/app/models/brands';
+import { Brands } from 'src/app/models/brands.model';
 
 @Component({
   selector: 'app-brands',
@@ -17,9 +17,9 @@ export class BrandsComponent implements OnInit {
   }
 
   brandInitialization() {
-    const bajaj = {
-      image: '../../../../assets/img/brands/bajaj.png',
-      name: 'Bajaj',
+    const ktm = {
+      image: '../../../../assets/img/brands/ktm.png',
+      name: 'Ktm',
     };
     const bmw = {
       image: '../../../../assets/img/brands/bmw.png',
@@ -42,6 +42,6 @@ export class BrandsComponent implements OnInit {
       name: 'Yamaha',
     };
 
-    this.brands = [bajaj, bmw, ducati, honda, kawasaki, yamaha];
+    this.brands = [ktm, bmw, ducati, honda, kawasaki, yamaha];
   }
 }

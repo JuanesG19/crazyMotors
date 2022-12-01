@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">CrazyMotorsSlogan</a>
+    <a class="navbar-brand" href="#">CrazyMotors Store</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -17,7 +17,7 @@
         <!-- Marcas -->
 
         <li class="nav-item">
-          <a class="nav-link active"  [routerLink]="['/brands']">
+          <a class="nav-link active" [routerLink]="['/brands']">
             {{ "Marcas" | uppercase }}</a
           >
         </li>
@@ -35,16 +35,59 @@
             {{ "Tipos" | uppercase }}
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">Motocross</a></li>
+            <li><a class="dropdown-item" href="#">Naked</a></li>
+            <li><a class="dropdown-item" href="#">Streetfighter</a></li>
+            <li><a class="dropdown-item" href="#">Supersport</a></li>
+            <li><a class="dropdown-item" href="#">Trail</a></li>
           </ul>
         </li>
       </ul>
-      <form class="d-flex">
-        <a class="navbar-brand" href="#">Login</a>
+      <form
+        class="d-flex"
+        *ngIf="
+          loginService.userState == true || stateLogin == true;
+          else register
+        "
+      >
+        <div class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <!-- Icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="currentColor"
+              class="bi bi-person-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+              />
+            </svg>
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-lg-end"
+            aria-labelledby="navbarDropdown"
+          >
+            <li>
+              <a class="dropdown-item" [routerLink]="['/profile']">Perfil</a>
+            </li>
+            <li><a class="dropdown-item" (click)="logout()">Cerrar Sesión</a></li>
+          </ul>
+        </div>
       </form>
     </div>
   </div>
 </nav>
+
+<ng-template #register>
+  <a class="navbar-brand" [routerLink]="['/register']">Registrate</a>
+</ng-template>
